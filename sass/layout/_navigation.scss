@@ -1,0 +1,63 @@
+.nav {
+    @include flex(center, center, row);
+    @include responsive(sm) {
+        height: 50%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__item {
+        margin: 0 40px;
+        @include responsive(md){
+            margin: 0 28px;
+        }
+        @media(max-width:840px){
+            margin: 0 20px;
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: $white-color;
+        transition: .4s ease;
+        transform-origin: center;
+        @include flex(center, center, row);
+        position: relative;
+
+        &::after {
+            transition: .4s ease;
+            content: "";
+            width: 0;
+            height: 2px;
+            background:#D946EF;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -7px;
+        }
+
+        &:hover::after,
+        &:active::after {
+            width: 100%;
+        }
+        &:hover{
+            color: #D946EF;
+        }
+        
+        @include responsive(sm) {
+            font-size: 2rem;
+            line-height: 1.5;
+            color: #fff;
+        }
+
+        @include responsive(xs) {
+            font-size: 1.8rem;
+        }
+
+        @include responsive(xxs) {
+            font-size: 1.6rem;
+        }
+
+    }
+}

@@ -1,0 +1,219 @@
+// * Services Section
+.services {
+    &__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        grid-gap: 30px;
+
+        @include responsive(lg) {
+            grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        }
+
+        @include responsive(sm) {
+            grid-gap: 20px;
+        }
+
+        @media(max-width:600px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @media(max-width:500px) {
+            width: 100%;
+        }
+
+        @include responsive(xxs) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+    }
+
+    &__card {
+        @include flex(center, center, column);
+        padding: 30px 23px;
+        box-shadow: 0px 22px 18px rgba(0, 0, 0, 0.05);
+        border-radius: 34px;
+        background: $secondary-gradient-color;
+        color: #fff;
+        transition: .4s ease-in-out;
+        cursor: pointer;
+        @include responsive(xxs) {
+            padding: 25px 20px;
+        }
+
+        &-imgbox {
+            @include flex(center, center, row);
+            border-radius: 50%;
+            width: 74px;
+            height: 74px;
+            margin-bottom: 19px;
+
+            @include responsive(xxs) {
+                width: 65px;
+                height: 65px;
+            }
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31px;
+            margin-bottom: 17px;
+            text-align: center;
+
+            @include responsive(xxs) {
+                margin-bottom: 10px;
+                font-size: 22px;
+            }
+
+            @include responsive(ss) {
+                font-size: 20px;
+            }
+        }
+
+        &-description {
+            text-align: start;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 24px;
+
+            @include responsive(xs) {
+                text-align: center;
+            }
+
+            @include responsive(ss) {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &-button {
+            @include flex(center, center, row);
+            gap: 8px;
+
+            span {
+                color: #fff;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+            }
+
+            img {
+                transition: .4s ease;
+            }
+
+            &:hover {
+                img {
+                    transform: translateX(10px) scaleX(1.05);
+                }
+            }
+        }
+
+        &:hover{
+            &:nth-child(1){
+                @extend .bg-1;
+            }
+            &:nth-child(2){
+                @extend .bg-2;
+            }
+            &:nth-child(3){
+                @extend .bg-3;
+            }
+            &:nth-child(4){
+                @extend .bg-4;
+            }
+            &:nth-child(5){
+                @extend .bg-5;
+            }
+            &:nth-child(6){
+                @extend .bg-6;
+            }
+        }
+    }
+}
+
+// * Team Section
+.team {
+    &__cards {
+        width: 100%;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        @include responsive(lg){
+         grid-template-columns:  repeat(auto-fit,minmax(13rem,1fr));   
+        }
+        @include responsive(sm){
+            grid-gap: 20px;
+        }
+        @include responsive(xxs){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__card {
+        @include flex(center, center, column);
+        text-align: center;
+        padding: 32px;
+        box-shadow: 0px 22px 18px rgba(0, 0, 0, 0.05);
+        border-radius: 34px;
+        background: $secondary-gradient-color;
+        transition: .7s ease-in-out;
+        cursor: pointer;
+        @include responsive(xxs){
+            width: 100%;
+        }
+
+        &:hover{
+            background: $primary-gradient-color;
+        }
+
+        &-imgbox {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+
+            img {
+                @extend .image;
+            }
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 7px;
+            color: #fff;
+            @include responsive(xs){
+                font-size: 22px;
+            }
+        }
+
+        &-job {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+            letter-spacing: 0.03em;
+            color: #fff;
+            margin-bottom: 11px;
+            text-transform: uppercase;
+            @include responsive(xs){
+            font-size: 14px;
+            }
+        }
+        &-networks{
+            @include flex(center,center,row);
+            gap: 12px;
+        }
+    }
+}

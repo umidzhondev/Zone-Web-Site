@@ -1,0 +1,127 @@
+.button {
+    background: $primary-gradient-color;
+    color: $white-color;
+    transition: .4s ease;
+
+    &__header {
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+
+        @include responsive(sm) {
+            width: 80%;
+            padding: 16px 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        @include responsive(xs) {
+            width: 90%;
+            font-size: 16px;
+            padding: 14px 20px;
+        }
+
+        @include responsive(ss) {
+            width: 95%;
+        }
+   
+    }
+
+    &__hero {
+        padding: 20px 40px;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        color: $white-color;
+        transition: .4s ease;
+
+        @include responsive(xs) {
+            padding: 13px 32px;
+        }
+
+        &-nonactive {
+            transition: .4s ease;
+            padding: 15px 22px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            color: $white-color;
+            background: transparent;
+            @include flex(center, center, row);
+            gap: 23px;
+
+            @include responsive(xs) {
+                padding: 9px 20px;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                color: $white-color;
+            }
+
+            &:hover {
+                transition: 1s ease;
+                background: $primary-gradient-color;
+            }
+        }
+    }
+
+    &__about {
+        padding: 7px 16px;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #fff;
+    }
+
+    &__subscribe {
+        position: absolute;
+        padding: 15px 50px;
+        @include flex(center, center, row);
+        gap: 8px;
+        opacity: 0.9;
+        border-radius: 70px;
+        right: 10px;
+        span {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            color: #fff;
+            @include responsive(sm){
+            font-size: 18px;
+            }
+        }
+        @include responsive(md){
+         padding: 15px 40px;   
+        }
+        @include responsive(sm){
+         padding: 15px 28px;   
+        }
+        @include responsive(xs){
+         padding: 10px 34px;
+         position: static;
+         width: 100%;
+         span{
+             font-family: "Dm sans",sans-serif;
+         }   
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
+   
+    }
+
+}
