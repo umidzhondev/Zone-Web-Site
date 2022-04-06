@@ -298,6 +298,7 @@
 .subscribe {
     padding: 100px 0;
     color: #fff;
+    position: relative;
 
     @include responsive(xs) {
         padding: 80px 0;

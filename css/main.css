@@ -769,6 +769,10 @@ a, span, p, button, li {
   }
 }
 
+.footer {
+  position: relative;
+}
+
 .footer__content {
   width: 100%;
   display: -webkit-box;
@@ -1083,6 +1087,13 @@ a, span, p, button, li {
   .footer__line {
     bottom: 100px;
   }
+}
+
+.footer__blur {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .header .navbar {
@@ -1830,6 +1841,7 @@ a, span, p, button, li {
 .subscribe {
   padding: 100px 0;
   color: #fff;
+  position: relative;
 }
 
 @media screen and (max-width: 576px) {
