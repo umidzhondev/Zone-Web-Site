@@ -2,7 +2,9 @@
     .navbar{
         padding: 40px 0;
         @include flex(space-between,center,row);
-
+        @include responsive(sm){
+            padding: 30px 0;
+        }
         &__logo{
             @include flex(center,center,row);
         }
